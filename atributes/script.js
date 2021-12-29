@@ -16,7 +16,7 @@ console.log(p.hasAttribute('style'))
 //usuwanie atrybutu:
 p.removeAttribute('style')
 
-console.log(divTag.dataset.moreInfo);
+console.log(divTag.dataset.number);
 
 //dodawanie atrybutu data:
 divTag.setAttribute('data-test', 'test')
