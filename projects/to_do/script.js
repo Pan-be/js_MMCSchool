@@ -4,7 +4,8 @@ let addBtn // <-- przycisk Add - dodanie elementu
 let ulList // <-- list zadań
 
 const main = () => {
-    
+    prepareDOMElements()
+    prepareDOMEvents()
 }
 
 const prepareDOMElements = () => {
@@ -12,6 +13,18 @@ const prepareDOMElements = () => {
     errorInfo = document.querySelector('.error-info')
     addBtn = document.querySelector('.btn-add')
     ulList = document.querySelector('.todoList ul')
-
-    document.addEventListener('DOMContentLoaded', main)
 }
+
+const prepareDOMEvents = () => {
+    addBtn.addEventListener('click', addNewTask)
+}
+
+const addNewTask = () => {
+    if (todoInput.value !== '') {
+        console.log('ok');
+    } else {
+        errorInfo.textContent = 'Wpisz treść zadania.'
+    }
+}
+
+document.addEventListener('DOMContentLoaded', main)
