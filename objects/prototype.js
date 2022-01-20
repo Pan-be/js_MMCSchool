@@ -1,9 +1,6 @@
 function User(name, age) {
     this.name = name
     this.age = age
-    this.hello = function () {
-        console.log(`Cześć ${this.name}`);
-    }
 }
 
 const newUser = new User('Janusz', 60)
