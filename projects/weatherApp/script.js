@@ -49,5 +49,12 @@ const getWeather = () => {
     }).catch(() => warning.textContent = 'Wpisz poprawną nazwę miasta.')
 }
 
-getWeather()
+const enterCheck = e => {
+    if (e.key === 'Enter') {
+        getWeather()
+    }
+}
+
+input.addEventListener('keyup', enterCheck)
 button.addEventListener('click', getWeather)
+getWeather()
